@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Trading Journal</h1>
+    <form id="tradingForm" action="process.php" method="post">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="currency_pair">Currency Pair:</label>
+        <input type="text" id="currency_pair" name="currency_pair" required><br>
+
+        <label for="amount">Profit/Loss Amount:</label>
+        <input type="number" id="amount" name="amount" required><br>
+
+        <label>Action:</label>
+        <input type="radio" id="buy" name="action" value="buy" required>
+        <label for="buy">Buy</label>
+        <input type="radio" id="sell" name="action" value="sell" required>
+        <label for="sell">Sell</label><br>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment"></textarea><br>
+
+        <input type="submit" value="Add Entry">
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
